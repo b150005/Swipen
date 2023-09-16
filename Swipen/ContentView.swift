@@ -6,13 +6,25 @@
 //
 
 import SwiftUI
+import Observation
 
 struct ContentView: View {
-    var body: some View {
-        Text(/*@START_MENU_TOKEN@*/"Hello, World!"/*@END_MENU_TOKEN@*/)
+  @Environment(ScreenSizeStore.self) private var screenSizeStore: ScreenSizeStore?
+  
+  var body: some View {
+    GeometryReader { (geometry: GeometryProxy) in
+      ContentRootView()
+        .onAppear {
+          screenSizeStore?.update(width: geometry.size.width, height: geometry.size.height)
+        }
+        .onChange(of: geometry.size) {
+          screenSizeStore?.update(width: geometry.size.width, height: geometry.size.height)
+        }
     }
+  }
 }
 
 #Preview {
-    ContentView()
+  ContentView()
+    .environment(ScreenSizeStore())
 }

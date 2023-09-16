@@ -8,11 +8,20 @@
 import SwiftUI
 
 struct DashboardView: View {
-    var body: some View {
-        Text(/*@START_MENU_TOKEN@*/"Hello, World!"/*@END_MENU_TOKEN@*/)
+  let current: Int = 64
+  let total: Int = 10000000
+  
+  var body: some View {
+    ScrollView {
+      CardView {
+        ProgressView(value: Double(current), total: Double(total))
+          .progressViewStyle(GaugeProgressStyle(current: current, total: total))
+          .padding()
+      }
     }
+  }
 }
 
 #Preview {
-    DashboardView()
+  DashboardView()
 }

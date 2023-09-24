@@ -7,7 +7,7 @@
 
 import SwiftUI
 
-struct ContentRootView: View {
+struct ContentTabView: View {
   @State var selection: Int = 1
   
   var body: some View {
@@ -32,5 +32,6 @@ struct ContentRootView: View {
 }
 
 #Preview {
-  ContentRootView()
+  ContentTabView()
+    .environment(ScreenSizeStore())
 }

@@ -13,7 +13,7 @@ struct SwipenApp: App {
   
   var body: some Scene {
     WindowGroup {
-      ContentRootView()
+      ContentTabView()
         .environment(screenSizeStore)
     }
   }

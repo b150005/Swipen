@@ -8,7 +8,7 @@
 import SwiftUI
 
 struct CardView<Content: View>: View {
-  @Environment(ScreenSizeStore.self) private var screenSizeStore: ScreenSizeStore?
+  @Environment(ScreenSizeStore.self) private var screenSizeStore: ScreenSizeStore
   @State private var contentSize: CGSize = .zero
   
   private var content: Content
@@ -19,7 +19,7 @@ struct CardView<Content: View>: View {
         return .infinity
       }
       else {
-        return contentSize.width > (screenSizeStore?.screenWidth ?? .infinity) ? .infinity : contentSize.width
+        return contentSize.width > screenSizeStore.size.width ? .infinity : contentSize.width
       }
     }
   }

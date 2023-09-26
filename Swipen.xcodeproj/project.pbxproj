@@ -9,17 +9,20 @@
 /* Begin PBXBuildFile section */
 		140DDE042AAD5FA900F4858B /* DashboardView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 140DDE032AAD5FA900F4858B /* DashboardView.swift */; };
 		140DDE062AAD68F900F4858B /* CardView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 140DDE052AAD68F900F4858B /* CardView.swift */; };
+		145CA9842AB9BD8F002CE4B5 /* HistoryCalenderView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 145CA9832AB9BD8F002CE4B5 /* HistoryCalenderView.swift */; };
 		146DA9C12AA8D2B3000B9C38 /* LearnView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 146DA9C02AA8D2B3000B9C38 /* LearnView.swift */; };
 		146DA9C32AA8D3BF000B9C38 /* ContentAddView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 146DA9C22AA8D3BF000B9C38 /* ContentAddView.swift */; };
 		146DA9C52AA8D438000B9C38 /* ContentListView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 146DA9C42AA8D438000B9C38 /* ContentListView.swift */; };
+		146EA2E82ABDAB2500D2E426 /* InfiniteTabPageView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 146EA2E72ABDAB2500D2E426 /* InfiniteTabPageView.swift */; };
 		1485F7CE2AA2D23200E8A8E8 /* SwipenApp.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1485F7CD2AA2D23200E8A8E8 /* SwipenApp.swift */; };
-		1485F7D02AA2D23200E8A8E8 /* ContentRootView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1485F7CF2AA2D23200E8A8E8 /* ContentRootView.swift */; };
+		1485F7D02AA2D23200E8A8E8 /* ContentTabView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1485F7CF2AA2D23200E8A8E8 /* ContentTabView.swift */; };
 		1485F7D22AA2D23200E8A8E8 /* Item.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1485F7D12AA2D23200E8A8E8 /* Item.swift */; };
 		1485F7D42AA2D23300E8A8E8 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 1485F7D32AA2D23300E8A8E8 /* Assets.xcassets */; };
 		1485F7D82AA2D23300E8A8E8 /* Preview Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 1485F7D72AA2D23300E8A8E8 /* Preview Assets.xcassets */; };
 		1485F7E32AA2D23400E8A8E8 /* SwipenTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1485F7E22AA2D23400E8A8E8 /* SwipenTests.swift */; };
 		1485F7ED2AA2D23400E8A8E8 /* SwipenUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1485F7EC2AA2D23400E8A8E8 /* SwipenUITests.swift */; };
 		1485F7EF2AA2D23400E8A8E8 /* SwipenUITestsLaunchTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1485F7EE2AA2D23400E8A8E8 /* SwipenUITestsLaunchTests.swift */; };
+		14C234942AB724C4004AACBC /* LearningHistory.swift in Sources */ = {isa = PBXBuildFile; fileRef = 14C234932AB724C4004AACBC /* LearningHistory.swift */; };
 		14E03A5E2AB1D0AF0069460E /* GaugeProgressStyle.swift in Sources */ = {isa = PBXBuildFile; fileRef = 14E03A5D2AB1D0AF0069460E /* GaugeProgressStyle.swift */; };
 		14E03A602AB1D58F0069460E /* UIScrollView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 14E03A5F2AB1D58F0069460E /* UIScrollView.swift */; };
 		14E03A622AB1E6E50069460E /* ScreenSizeStore.swift in Sources */ = {isa = PBXBuildFile; fileRef = 14E03A612AB1E6E50069460E /* ScreenSizeStore.swift */; };
@@ -47,12 +50,14 @@
 		140DDE022AAD5E1900F4858B /* README.md */ = {isa = PBXFileReference; lastKnownFileType = net.daringfireball.markdown; path = README.md; sourceTree = "<group>"; };
 		140DDE032AAD5FA900F4858B /* DashboardView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DashboardView.swift; sourceTree = "<group>"; };
 		140DDE052AAD68F900F4858B /* CardView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CardView.swift; sourceTree = "<group>"; };
+		145CA9832AB9BD8F002CE4B5 /* HistoryCalenderView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HistoryCalenderView.swift; sourceTree = "<group>"; };
 		146DA9C02AA8D2B3000B9C38 /* LearnView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LearnView.swift; sourceTree = "<group>"; };
 		146DA9C22AA8D3BF000B9C38 /* ContentAddView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ContentAddView.swift; sourceTree = "<group>"; };
 		146DA9C42AA8D438000B9C38 /* ContentListView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ContentListView.swift; sourceTree = "<group>"; };
+		146EA2E72ABDAB2500D2E426 /* InfiniteTabPageView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = InfiniteTabPageView.swift; sourceTree = "<group>"; };
 		1485F7CA2AA2D23200E8A8E8 /* Swipen.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Swipen.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		1485F7CD2AA2D23200E8A8E8 /* SwipenApp.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SwipenApp.swift; sourceTree = "<group>"; };
-		1485F7CF2AA2D23200E8A8E8 /* ContentRootView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ContentRootView.swift; sourceTree = "<group>"; };
+		1485F7CF2AA2D23200E8A8E8 /* ContentTabView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ContentTabView.swift; sourceTree = "<group>"; };
 		1485F7D12AA2D23200E8A8E8 /* Item.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Item.swift; sourceTree = "<group>"; };
 		1485F7D32AA2D23300E8A8E8 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		1485F7D52AA2D23300E8A8E8 /* Swipen.entitlements */ = {isa = PBXFileReference; lastKnownFileType = text.plist.entitlements; path = Swipen.entitlements; sourceTree = "<group>"; };
@@ -63,6 +68,7 @@
 		1485F7E82AA2D23400E8A8E8 /* SwipenUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = SwipenUITests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		1485F7EC2AA2D23400E8A8E8 /* SwipenUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SwipenUITests.swift; sourceTree = "<group>"; };
 		1485F7EE2AA2D23400E8A8E8 /* SwipenUITestsLaunchTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SwipenUITestsLaunchTests.swift; sourceTree = "<group>"; };
+		14C234932AB724C4004AACBC /* LearningHistory.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LearningHistory.swift; sourceTree = "<group>"; };
 		14E03A5D2AB1D0AF0069460E /* GaugeProgressStyle.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GaugeProgressStyle.swift; sourceTree = "<group>"; };
 		14E03A5F2AB1D58F0069460E /* UIScrollView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UIScrollView.swift; sourceTree = "<group>"; };
 		14E03A612AB1E6E50069460E /* ScreenSizeStore.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ScreenSizeStore.swift; sourceTree = "<group>"; };
@@ -119,12 +125,15 @@
 			children = (
 				1485F7CD2AA2D23200E8A8E8 /* SwipenApp.swift */,
 				14E03A632AB1ECE70069460E /* ContentView.swift */,
-				1485F7CF2AA2D23200E8A8E8 /* ContentRootView.swift */,
+				1485F7CF2AA2D23200E8A8E8 /* ContentTabView.swift */,
 				146DA9C22AA8D3BF000B9C38 /* ContentAddView.swift */,
 				140DDE032AAD5FA900F4858B /* DashboardView.swift */,
+				145CA9832AB9BD8F002CE4B5 /* HistoryCalenderView.swift */,
+				146EA2E72ABDAB2500D2E426 /* InfiniteTabPageView.swift */,
 				14E03A5D2AB1D0AF0069460E /* GaugeProgressStyle.swift */,
 				146DA9C02AA8D2B3000B9C38 /* LearnView.swift */,
 				140DDE052AAD68F900F4858B /* CardView.swift */,
+				14C234932AB724C4004AACBC /* LearningHistory.swift */,
 				14E03A612AB1E6E50069460E /* ScreenSizeStore.swift */,
 				14E03A5F2AB1D58F0069460E /* UIScrollView.swift */,
 				146DA9C42AA8D438000B9C38 /* ContentListView.swift */,
@@ -299,9 +308,12 @@
 				146DA9C12AA8D2B3000B9C38 /* LearnView.swift in Sources */,
 				14E03A622AB1E6E50069460E /* ScreenSizeStore.swift in Sources */,
 				146DA9C52AA8D438000B9C38 /* ContentListView.swift in Sources */,
+				14C234942AB724C4004AACBC /* LearningHistory.swift in Sources */,
 				140DDE042AAD5FA900F4858B /* DashboardView.swift in Sources */,
+				145CA9842AB9BD8F002CE4B5 /* HistoryCalenderView.swift in Sources */,
 				14E03A602AB1D58F0069460E /* UIScrollView.swift in Sources */,
-				1485F7D02AA2D23200E8A8E8 /* ContentRootView.swift in Sources */,
+				146EA2E82ABDAB2500D2E426 /* InfiniteTabPageView.swift in Sources */,
+				1485F7D02AA2D23200E8A8E8 /* ContentTabView.swift in Sources */,
 				1485F7D22AA2D23200E8A8E8 /* Item.swift in Sources */,
 				140DDE062AAD68F900F4858B /* CardView.swift in Sources */,
 				1485F7CE2AA2D23200E8A8E8 /* SwipenApp.swift in Sources */,

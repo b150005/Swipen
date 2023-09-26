@@ -9,24 +9,26 @@ import SwiftUI
 import Observation
 
 @Observable final class ScreenSizeStore {
-  private(set) var screenWidth: CGFloat
-  private(set) var screenHeight: CGFloat
-  
-  init() {
-    let screenBounds: CGRect
-    if let window = UIApplication.shared.connectedScenes.first as? UIWindowScene {
-      screenBounds = window.screen.bounds
+  private(set) var screenRect: CGRect
+  var size: CGSize {
+    get {
+      screenRect.size
     }
-    else {
-      screenBounds = UIScreen.main.bounds
-    }
-    
-    self.screenWidth = screenBounds.width
-    self.screenHeight = screenBounds.height
   }
   
-  func update(width: CGFloat, height: CGFloat) {
-    self.screenWidth = width
-    self.screenHeight = height
+  init() {
+    let screenRect: CGRect
+    if let window = UIApplication.shared.connectedScenes.first as? UIWindowScene {
+      screenRect = window.screen.bounds
+    }
+    else {
+      screenRect = UIScreen.main.bounds
+    }
+    
+    self.screenRect = screenRect
+  }
+  
+  func update(rect: CGRect) {
+    self.screenRect = rect
   }
 }

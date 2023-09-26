@@ -9,16 +9,16 @@ import SwiftUI
 import Observation
 
 struct ContentView: View {
-  @Environment(ScreenSizeStore.self) private var screenSizeStore: ScreenSizeStore?
+  @Environment(ScreenSizeStore.self) private var screenSizeStore: ScreenSizeStore
   
   var body: some View {
     GeometryReader { (geometry: GeometryProxy) in
-      ContentRootView()
+      ContentTabView()
         .onAppear {
-          screenSizeStore?.update(width: geometry.size.width, height: geometry.size.height)
+          screenSizeStore.update(rect: geometry.frame(in: .global))
         }
         .onChange(of: geometry.size) {
-          screenSizeStore?.update(width: geometry.size.width, height: geometry.size.height)
+          screenSizeStore.update(rect: geometry.frame(in: .global))
         }
     }
   }

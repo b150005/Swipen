@@ -8,20 +8,33 @@
 import SwiftUI
 
 struct DashboardView: View {
-  let current: Int = 64
-  let total: Int = 10000000
+  private var topAreaHeight: CGFloat {
+    get {
+      // TODO: Geometry Readerを使って取得
+      return 100.0
+    }
+  }
   
   var body: some View {
-    ScrollView {
-      CardView {
-        ProgressView(value: Double(current), total: Double(total))
-          .progressViewStyle(GaugeProgressStyle(current: current, total: total))
-          .padding()
+    ZStack(alignment: .top) {
+      ScrollView(.vertical, showsIndicators: false) {
+        // TODO: Progress ViewをTapした時の挙動
+        CardView {
+          ProgressView(value: 64, total: 100) {
+            Text("Label")
+          } currentValueLabel: {
+            Text("Current Value Label")
+          }
+        }
       }
+      .padding(.top, topAreaHeight)
+      
+      HistoryCalenderView()
     }
   }
 }
 
 #Preview {
   DashboardView()
+    .environment(ScreenSizeStore())
 }

@@ -6,7 +6,6 @@
 //
 
 import SwiftUI
-import Observation
 
 struct ContentView: View {
   @Environment(ScreenSizeStore.self) private var screenSizeStore: ScreenSizeStore

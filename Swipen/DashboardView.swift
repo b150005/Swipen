@@ -8,17 +8,14 @@
 import SwiftUI
 
 struct DashboardView: View {
-  private var topAreaHeight: CGFloat {
-    get {
-      // TODO: Geometry Readerを使って取得
-      return 100.0
-    }
-  }
   
   var body: some View {
-    ZStack(alignment: .top) {
+    VStack {
+      HistoryCalenderView()
+      
       ScrollView(.vertical, showsIndicators: false) {
         // TODO: Progress ViewをTapした時の挙動
+        // TODO: Progress Viewへの値渡し
         CardView {
           ProgressView(value: 64, total: 100) {
             Text("Label")
@@ -27,9 +24,8 @@ struct DashboardView: View {
           }
         }
       }
-      .padding(.top, topAreaHeight)
-      
-      HistoryCalenderView()
+      .padding(.top)
+      .zIndex(-1.0)
     }
   }
 }

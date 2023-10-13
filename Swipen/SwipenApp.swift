@@ -6,6 +6,7 @@
 //
 
 import SwiftUI
+import SwiftData
 
 @main
 struct SwipenApp: App {
@@ -15,6 +16,13 @@ struct SwipenApp: App {
     WindowGroup {
       ContentTabView()
         .environment(screenSizeStore)
+        .modelContainer(for: [
+          LearningHistory.self,
+          LearningContent.self,
+          Sentence.self,
+          Phrase.self, 
+          Tag.self,
+        ])
     }
   }
 }

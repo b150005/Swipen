@@ -5,6 +5,7 @@
 //  Created by 伊藤 直輝 on 2023/09/19.
 //
 
+import Foundation
 import SwiftUI
 
 struct HistoryCalenderView: View {
@@ -18,6 +19,7 @@ struct HistoryCalenderView: View {
     InfiniteTabPageView(height: 85) { (page: UInt8) in
       VStack {
         HStack {
+          Spacer()
           ForEach(0 ..< 7, id: \.self) { (dayIndex: Int) in
             VStack {
               Button {
@@ -32,17 +34,20 @@ struct HistoryCalenderView: View {
                       .stroke()
                       // TODO: 進捗によって色を変化
                       .foregroundStyle(.gray)
+                      .frame(width: 45, height: 45)
                   }
+                  .padding(.top)
               }
               
               Text(dateSymbol(from: date(page, dayIndex: dayIndex)))
+                .foregroundStyle(Color("ForegroundColor"))
             }
+            Spacer()
           }
         }
-        
         Divider()
       }
-      .background(.white)
+      .background(Color("BackgroundMonoColor"))
     }
   }
 }

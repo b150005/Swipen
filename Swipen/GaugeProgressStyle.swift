@@ -10,7 +10,7 @@ import SwiftUI
 extension GeometryProxy: @unchecked Sendable {}
 
 struct GaugeProgressStyle: ProgressViewStyle {
-  @Environment(ScreenSizeStore.self) private var screenSizeStore: ScreenSizeStore
+  @Environment(ScreenSizeStore.self) private var screenSizeStore: ScreenSizeStore?
   @State private var current: Int
   @State private var total: Int
   @State private var textLabelSize: CGSize = .zero
@@ -23,8 +23,17 @@ struct GaugeProgressStyle: ProgressViewStyle {
       
       // ここで登場する60はpaddingの default値 * 2 より大きい値であれば何でも良いが、
       // paddingのdefault値はシステム依存であり詳細な値が判明していないため60で仮置きしている
-      return (textLabelSize.width * scale) >= (screenSizeStore.size.width - padding) ?
+      return (textLabelSize.width * scale) >= (screenWidth - padding) ?
         .infinity : textLabelSize.width * scale
+    }
+  }
+  
+  private var screenWidth: CGFloat {
+    if let screenSizeStore {
+      return screenSizeStore.size.width
+    }
+    else {
+      return UIScreen.main.bounds.width
     }
   }
   

@@ -7,8 +7,11 @@
 
 import SwiftUI
 
+/// コンテンツの横幅に応じて`width`を自動調整するCardView
+///
+/// - Important: Previewで表示する際は`ScreenSizeStore`を`environment(_:)`で参照してください。
 struct CardView<Content: View>: View {
-  @Environment(ScreenSizeStore.self) private var screenSizeStore: ScreenSizeStore
+  @Environment(ScreenSizeStore.self) private var screenSizeStore: ScreenSizeStore?
   @State private var contentSize: CGSize = .zero
   
   private var content: Content
@@ -18,8 +21,12 @@ struct CardView<Content: View>: View {
       if isFullWidth {
         return .infinity
       }
-      else {
+      else if let screenSizeStore {
         return contentSize.width > screenSizeStore.size.width ? .infinity : contentSize.width
+      }
+      else {
+        let screenRect: CGRect = UIScreen.main.bounds
+        return contentSize.width > screenRect.width ? .infinity : contentSize.width
       }
     }
   }
@@ -61,6 +68,7 @@ struct CardView<Content: View>: View {
         Text("Hello, world!")
         Text("Hello!")
         Text("wow!")
+        Label("a", systemImage: "star.fill")
       }
     }
     CardView(expandsHorizontally: true) {

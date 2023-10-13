@@ -8,7 +8,7 @@
 import SwiftUI
 
 struct InfiniteTabPageView<Content: View>: View {
-  @Environment(ScreenSizeStore.self) private var screenSizeStore: ScreenSizeStore
+  @Environment(ScreenSizeStore.self) private var screenSizeStore: ScreenSizeStore?
   
   @GestureState private var translationX: CGFloat = .zero
   @State private var currentPage: UInt8 = .zero
@@ -20,7 +20,12 @@ struct InfiniteTabPageView<Content: View>: View {
   
   private var screenWidth: CGFloat {
     get {
-      return screenSizeStore.size.width
+      if let screenSizeStore {
+        return screenSizeStore.size.width
+      }
+      else {
+        return UIScreen.main.bounds.width
+      }
     }
   }
   
@@ -76,24 +81,23 @@ struct InfiniteTabPageView<Content: View>: View {
       
       // Back
       content(currentPage + 1)
-        .offset(x: -screenSizeStore.size.width)
+        .offset(x: -screenWidth)
       
       // Next
       if currentPage > .zero {
         content(currentPage - 1)
-          .offset(x: screenSizeStore.size.width)
+          .offset(x: screenWidth)
       }
     }
-    .frame(width: screenSizeStore.size.width, height: height)
+    .frame(width: screenWidth, height: height)
     .offset(x: translationX) // DragGestureによるOffset
-    .offset(x: offsetX)     // Subviewの初期Offset
+    .offset(x: offsetX)      // Subviewの初期Offset
     .gesture(dragGesture)
   }
 }
 
 extension InfiniteTabPageView {
   private func offset(by drag: CGFloat) -> CGFloat {
-    let screenWidth: CGFloat = screenSizeStore.size.width
     return min(screenWidth, max(-screenWidth, drag))
   }
   

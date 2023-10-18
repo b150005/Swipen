@@ -12,6 +12,7 @@
 		140DDE062AAD68F900F4858B /* CardView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 140DDE052AAD68F900F4858B /* CardView.swift */; };
 		143B4B672AC59F9C00637BEC /* AppContent.json in Resources */ = {isa = PBXBuildFile; fileRef = 143B4B662AC59F9C00637BEC /* AppContent.json */; };
 		145CA9842AB9BD8F002CE4B5 /* HistoryCalenderView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 145CA9832AB9BD8F002CE4B5 /* HistoryCalenderView.swift */; };
+		146A2F0C2ADB8B5E00C66059 /* ErrorTextFieldStyle.swift in Sources */ = {isa = PBXBuildFile; fileRef = 146A2F0B2ADB8B5E00C66059 /* ErrorTextFieldStyle.swift */; };
 		146DA9C12AA8D2B3000B9C38 /* LearnView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 146DA9C02AA8D2B3000B9C38 /* LearnView.swift */; };
 		146DA9C32AA8D3BF000B9C38 /* ContentAddView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 146DA9C22AA8D3BF000B9C38 /* ContentAddView.swift */; };
 		146DA9C52AA8D438000B9C38 /* ContentListView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 146DA9C42AA8D438000B9C38 /* ContentListView.swift */; };
@@ -58,6 +59,7 @@
 		140DDE052AAD68F900F4858B /* CardView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CardView.swift; sourceTree = "<group>"; };
 		143B4B662AC59F9C00637BEC /* AppContent.json */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.json; name = AppContent.json; path = _Assets/AppContent.json; sourceTree = SOURCE_ROOT; };
 		145CA9832AB9BD8F002CE4B5 /* HistoryCalenderView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HistoryCalenderView.swift; sourceTree = "<group>"; };
+		146A2F0B2ADB8B5E00C66059 /* ErrorTextFieldStyle.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ErrorTextFieldStyle.swift; sourceTree = "<group>"; };
 		146DA9C02AA8D2B3000B9C38 /* LearnView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LearnView.swift; sourceTree = "<group>"; };
 		146DA9C22AA8D3BF000B9C38 /* ContentAddView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ContentAddView.swift; sourceTree = "<group>"; };
 		146DA9C42AA8D438000B9C38 /* ContentListView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ContentListView.swift; sourceTree = "<group>"; };
@@ -152,6 +154,7 @@
 				1498F4852AD1A5CE00C2705E /* DataModel.swift */,
 				14E03A612AB1E6E50069460E /* ScreenSizeStore.swift */,
 				14E03A5F2AB1D58F0069460E /* UIScrollView.swift */,
+				146A2F0B2ADB8B5E00C66059 /* ErrorTextFieldStyle.swift */,
 				1485F7D32AA2D23300E8A8E8 /* Assets.xcassets */,
 				1485F7D52AA2D23300E8A8E8 /* Swipen.entitlements */,
 				1485F7D92AA2D23300E8A8E8 /* Info.plist */,
@@ -326,6 +329,7 @@
 				14E03A622AB1E6E50069460E /* ScreenSizeStore.swift in Sources */,
 				146DA9C52AA8D438000B9C38 /* ContentListView.swift in Sources */,
 				140DDE042AAD5FA900F4858B /* DashboardView.swift in Sources */,
+				146A2F0C2ADB8B5E00C66059 /* ErrorTextFieldStyle.swift in Sources */,
 				145CA9842AB9BD8F002CE4B5 /* HistoryCalenderView.swift in Sources */,
 				140BE03A2AD8021800EABE29 /* TagAddView.swift in Sources */,
 				14E03A602AB1D58F0069460E /* UIScrollView.swift in Sources */,
